@@ -11,7 +11,7 @@
 	</parent>
 	<groupId>br.com.rocha</groupId>
 	<artifactId>IntegracaoContinua</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1</version>
 	<name>IntegracaoContinua</name>
 	<description>Demo project for Spring Boot Continuous Integration</description>
 
