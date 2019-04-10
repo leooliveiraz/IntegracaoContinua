@@ -1,7 +1,6 @@
 FROM openjdk:8-jdk-alpine
-VOLUME /tmp
-ARG DEPENDENCY=target/dependency
-COPY ${DEPENDENCY}/BOOT-INF/lib /app/lib
-COPY ${DEPENDENCY}/META-INF /app/META-INF
-COPY ${DEPENDENCY}/BOOT-INF/classes /app
-ENTRYPOINT ["java","-cp","app:app/lib/*","integracao"]
+RUN mkdir -p /usr/local/dockerize
+ ADD  @project.build.finalName@.jar /usr/local/dockerize/
+ADD run.sh run.sh 
+RUN chmod +x run.sh 
+CMD ./run.sh
