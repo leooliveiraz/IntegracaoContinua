@@ -1,5 +1,6 @@
 FROM java:8 
 EXPOSE 8080
-ENV IPBD=$IPBD
+ENV BDAPP=-Dspring.datasource.url=jdbc:postgresql://$IPBD:5432/integracao
 ADD /target/integracaocontinua.jar integracaocontinua.jar
-ENTRYPOINT ["java", "-jar", "-Dspring.datasource.url=jdbc:postgresql://"$IPBD":5432/integracao", "integracaocontinua.jar"]
+RUN ECHO BDAPP
+ENTRYPOINT ["java", "-jar", BDAPP , "integracaocontinua.jar"]
