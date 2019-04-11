@@ -1,4 +1,4 @@
 FROM java:8 
 EXPOSE 8080
 ADD /target/integracaocontinua.jar integracaocontinua.jar
-ENTRYPOINT ["java", "-jar", "integracaocontinua.jar"]
+ENTRYPOINT ["java", "-jar", "integracaocontinua.jar -Dspring.datasource.url=jdbc:postgresql://$IPBD:5432/integracao"]
