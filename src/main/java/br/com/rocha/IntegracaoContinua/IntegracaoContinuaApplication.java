@@ -8,6 +8,7 @@ public class IntegracaoContinuaApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(IntegracaoContinuaApplication.class, args);
 		System.out.println("Olá Mundo");
+		System.out.println("Sou Lindo!");
 	}
 
 }
