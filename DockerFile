@@ -1,4 +1,4 @@
-FROM openjdk:8-jre-alpine
+FROM java:8 
 EXPOSE 8080
 ADD /target/integracaocontinua.jar integracaocontinua.jar
 ENTRYPOINT ["javaw", "-jar", "integracaocontinua.jar"]
