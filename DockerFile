@@ -46,7 +46,6 @@ RUN set -ex && \
     sed -i s/#networkaddress.cache.ttl=-1/networkaddress.cache.ttl=10/ $JAVA_HOME/jre/lib/security/java.security && \
     apk del curl glibc-i18n && \
     rm -rf /opt/jdk/jre/plugin \
-           /opt/jdk/jre/bin/javaws \
            /opt/jdk/jre/bin/orbd \
            /opt/jdk/jre/bin/pack200 \
            /opt/jdk/jre/bin/policytool \
