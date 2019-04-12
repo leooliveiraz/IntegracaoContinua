@@ -1,4 +1,4 @@
 FROM java:8 
 EXPOSE 8080
 ADD /target/integracaocontinua.jar integracaocontinua.jar
-ENTRYPOINT ["javaw", "-jar", "integracaocontinua.jar"]
+ENTRYPOINT ["java", "-jar", "integracaocontinua.jar"]
